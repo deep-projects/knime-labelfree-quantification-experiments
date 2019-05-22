@@ -1,0 +1,42 @@
+cli:
+  baseCommand: run-knime
+  class: CommandLineTool
+  cwlVersion: v1.0
+  doc: KNIME Labelfree Quantification.
+  inputs:
+    database_name:
+      doc: Name of database file located in databases subdirectory.
+      inputBinding: {position: 1}
+      type: string
+    input_dir:
+      doc: Input directory containing datasets and databases subdirectories.
+      inputBinding: {position: 0}
+      type: Directory
+  outputs:
+    execute_log:
+      outputBinding: {glob: /output/execute.log}
+      type: File
+    peptide_background_quantification:
+      outputBinding: {glob: /output/peptide_background_quantification.csv}
+      type: File
+    peptide_quantification:
+      outputBinding: {glob: /output/peptide_quantification.csv}
+      type: File
+    protein_background_quantification:
+      outputBinding: {glob: /output/protein_background_quantification.csv}
+      type: File
+    protein_quantification:
+      outputBinding: {glob: /output/protein_quantification.csv}
+      type: File
+container:
+  engine: docker
+  settings:
+    image: {url: 'docker.io/deepprojects/knime-labelfree-quantification:dev'}
+inputs:
+  database_name: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta
+  input_dir:
+    class: Directory
+    connector:
+      access: {archiveFormat: gztar, url: 'https://s3.denbi.uni-tuebingen.de/fb-test/demo_container/cibi_user_meeting_2018/labelfree_example.tar.gz'}
+      command: red-connector-http-archive
+redVersion: '7'
