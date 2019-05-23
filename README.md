@@ -1,6 +1,6 @@
 # KNIME Labelfree Quantification Experiments
 
-This is the [KNIME Labelfree Quantification](http://citar.eaas.uni-freiburg.de/citar-headless-client/?id=188b6194-ea68-4e59-88c2-61d652941e29#/container-landing-page) workflow. We have extended the original [Docker image](https://hub.docker.com/r/fbartusch/knime-labelfree-quantification/tags) to be compatible with [RED and Curious Containers](https://www.curious-containers.cc).
+This is the [KNIME Labelfree Quantification](http://citar.eaas.uni-freiburg.de/citar-headless-client/?id=188b6194-ea68-4e59-88c2-61d652941e29#/container-landing-page) workflow. We have extended the original [Docker image](https://hub.docker.com/r/fbartusch/knime-labelfree-quantification) to be compatible with [RED and Curious Containers](https://www.curious-containers.cc).
 
 ## Execute from Reproducible Experiment Description (RED)
 
@@ -42,4 +42,4 @@ ls *.csv *.log
 
 ## Resources
 
-* [Docker Build Directory](https://github.com/deep-projects/appliances/tree/master/knime-labelfree-quantification/0.1)
+* [Docker Build Directory](https://github.com/deep-projects/appliances/tree/master/knime-labelfree-quantification/0.2)
