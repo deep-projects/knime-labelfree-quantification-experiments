@@ -7,6 +7,8 @@ yaml = YAML(typ='safe')
 with open('knime-labelfree-quantification.cwl.yml') as f:
     cwl = yaml.load(f)
 
+del cwl['requirements']
+
 red = {
     'redVersion': '7',
     'cli': cwl,
@@ -69,7 +71,7 @@ red = {
         'engine': 'docker',
         'settings': {
             'image': {
-                'url': 'docker.io/deepprojects/knime-labelfree-quantification:dev'
+                'url': 'docker.io/deepprojects/knime-labelfree-quantification:0.2'
             }
         }
     }

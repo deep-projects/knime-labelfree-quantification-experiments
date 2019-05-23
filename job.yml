@@ -1,0 +1,4 @@
+input_dir:
+  class: "Directory"
+  location: "labelfree_example"
+database_name: "s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta"

@@ -19,20 +19,24 @@ outputs:
   execute_log:
     type: "File"
     outputBinding:
-      glob: "/output/execute.log"
+      glob: "execute.log"
   peptide_background_quantification:
     type: "File"
     outputBinding:
-      glob: "/output/peptide_background_quantification.csv"
+      glob: "peptide_background_quantification.csv"
   protein_background_quantification:
     type: "File"
     outputBinding:
-      glob: "/output/protein_background_quantification.csv"
+      glob: "protein_background_quantification.csv"
   peptide_quantification:
     type: "File"
     outputBinding:
-      glob: "/output/peptide_quantification.csv"
+      glob: "peptide_quantification.csv"
   protein_quantification:
     type: "File"
     outputBinding:
-      glob: "/output/protein_quantification.csv"
+      glob: "protein_quantification.csv"
+
+requirements:
+  DockerRequirement:
+    dockerPull: "docker.io/deepprojects/knime-labelfree-quantification:0.2"

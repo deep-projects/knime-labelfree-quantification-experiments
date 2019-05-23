@@ -1,2 +1,5 @@
 .idea
 outputs
+labelfree_example*
+*.log
+*.csv

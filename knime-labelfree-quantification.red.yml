@@ -14,24 +14,24 @@ cli:
       type: Directory
   outputs:
     execute_log:
-      outputBinding: {glob: /output/execute.log}
+      outputBinding: {glob: execute.log}
       type: File
     peptide_background_quantification:
-      outputBinding: {glob: /output/peptide_background_quantification.csv}
+      outputBinding: {glob: peptide_background_quantification.csv}
       type: File
     peptide_quantification:
-      outputBinding: {glob: /output/peptide_quantification.csv}
+      outputBinding: {glob: peptide_quantification.csv}
       type: File
     protein_background_quantification:
-      outputBinding: {glob: /output/protein_background_quantification.csv}
+      outputBinding: {glob: protein_background_quantification.csv}
       type: File
     protein_quantification:
-      outputBinding: {glob: /output/protein_quantification.csv}
+      outputBinding: {glob: protein_quantification.csv}
       type: File
 container:
   engine: docker
   settings:
-    image: {url: 'docker.io/deepprojects/knime-labelfree-quantification:dev'}
+    image: {url: 'docker.io/deepprojects/knime-labelfree-quantification:0.2'}
 inputs:
   database_name: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta
   input_dir:
