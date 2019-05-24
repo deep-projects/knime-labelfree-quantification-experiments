@@ -1,4 +1,28 @@
+database_name: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta
 input_dir:
-  class: "Directory"
-  location: "labelfree_example"
-database_name: "s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta"
+  class: Directory
+  listing:
+  - basename: datasets
+    class: Directory
+    listing:
+    - {basename: lfq_spikein_dilution_1.mzML, class: File}
+    - {basename: lfq_spikein_dilution_2.mzML, class: File}
+    - {basename: lfq_spikein_dilution_3.mzML, class: File}
+  - basename: databases
+    class: Directory
+    listing:
+    - {basename: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta, class: File}
+    - {basename: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta.phr,
+      class: File}
+    - {basename: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta.pin,
+      class: File}
+    - {basename: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta.psq,
+      class: File}
+    - {basename: uniprot-s-pyogenes-sf370-plus-potato-and-human-spike-ins.fasta, class: File}
+    - {basename: uniprot-s-pyogenes-sf370-plus-potato-and-human-spike-ins.fasta.phr,
+      class: File}
+    - {basename: uniprot-s-pyogenes-sf370-plus-potato-and-human-spike-ins.fasta.pin,
+      class: File}
+    - {basename: uniprot-s-pyogenes-sf370-plus-potato-and-human-spike-ins.fasta.psq,
+      class: File}
+  location: labelfree_example
