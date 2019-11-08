@@ -7,14 +7,14 @@ This is the [KNIME Labelfree Quantification](http://citar.eaas.uni-freiburg.de/c
 ```bash
 # install CC-FAICE
 pip3 install --user pipx
-pipx install cc-faice==7.*
+pipx install cc-faice==8.*
 
 
 # prepare
 cd knime-labelfree-quantification
 
 # execute
-faice agent red knime-labelfree-quantification.red.yml
+faice exec knime-labelfree-quantification.red.yml
 
 # check outputs
 ls outputs/*

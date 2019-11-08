@@ -60,7 +60,7 @@ del cwl['requirements']
 
 
 red = {
-    'redVersion': '7',
+    'redVersion': '8',
     'cli': cwl,
     'inputs': {
         'input_dir': {
@@ -83,6 +83,10 @@ red = {
                 'url': docker_image_url
             }
         }
+    },
+    'execution': {
+        'engine': 'ccfaice',
+        'settings': {}
     }
 }
 

@@ -31,7 +31,10 @@ cli:
 container:
   engine: docker
   settings:
-    image: {url: 'docker.io/deepprojects/knime-labelfree-quantification:0.2'}
+    image: {url: 'docker.io/deepprojects/knime-labelfree-quantification:0.3'}
+execution:
+  engine: ccfaice
+  settings: {}
 inputs:
   database_name: s_pyo_sf370_potato_human_target_decoy_with_contaminants.fasta
   input_dir:
@@ -65,4 +68,4 @@ inputs:
         class: File}
       - {basename: uniprot-s-pyogenes-sf370-plus-potato-and-human-spike-ins.fasta.psq,
         class: File}
-redVersion: '7'
+redVersion: '8'

@@ -39,4 +39,4 @@ outputs:
 
 requirements:
   DockerRequirement:
-    dockerPull: "docker.io/deepprojects/knime-labelfree-quantification:0.2"
+    dockerPull: "docker.io/deepprojects/knime-labelfree-quantification:0.3"
