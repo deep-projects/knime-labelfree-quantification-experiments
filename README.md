@@ -42,4 +42,4 @@ ls *.csv *.log
 
 ## Resources
 
-* [Docker Build Directory](https://github.com/deep-projects/appliances/tree/master/knime-labelfree-quantification/0.2)
+* [Docker Build Directory](https://github.com/deep-projects/appliances/tree/master/knime-labelfree-quantification/0.3)
