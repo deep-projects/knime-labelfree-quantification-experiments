@@ -1,0 +1,118 @@
+{
+	"@context": "https://w3id.org/ro/crate/0.2-DRAFT/context",
+	"@graph": [
+		{
+			"@id": "ro-crate-metadata.jsonld",
+			"@type": "CreativeWork",
+			"identifier": "ro-crate-metadata.jsonld",
+			"about": {"@id": "./"}
+		},
+		{
+			"@id": "./",
+			"@type": "Dataset",
+			"name": "knime-labelfree-quantification-experiments",
+			"author": "#cjansen",
+			"contactPoint": "#contact",
+			"description": "A collection of CWL and RED Workflow Descriptions. The experiments described perform a label-free quantification of peptides.",
+			"url": "https://github.com/deep-projects/knime-labelfree-quantification-experiments",
+			"hasPart": [
+				{ "@id": "generate-red-and-job.py" },
+				{ "@id": "job.yml" },
+				{ "@id": "knime-labelfree-quantification.cwl.yml" },
+				{ "@id": "knime-labelfree-quantification.red.yml" }
+			]
+		},
+		{
+			"@id": "generate-red-and-job.py",
+			"@type": "SoftwareSourceCode",
+			"name": "generate red and cwl job Python Script",
+			"programmingLanguage": "python",
+			"description": "A python script that generates the RED and CWL files.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#python" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/knime-labelfree-quantification-experiments" }
+		},
+		{
+			"@id": "job.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "quantification CWL Job Description",
+			"programmingLanguage": { "@id": "https://w3id.org/cwl/v1.0/" },
+			"description": "CWL Job description to describe the process of the label-free quantification.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#cwltool" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/knime-labelfree-quantification-experiments" }
+		},
+		{
+			"@id": "knime-labelfree-quantification.cwl.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "quantification CWL Cli Description",
+			"programmingLanguage": { "@id": "https://w3id.org/cwl/v1.0/" },
+			"description": "CWL Cli description to describe the process of the label-free quantification.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#cwltool" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/knime-labelfree-quantification-experiments" }
+		},
+		{
+			"@id": "knime-labelfree-quantification.red.yml",
+			"@type": "SoftwareSourceCode",
+			"additionalType": { "@id": "wfdesc:Workflow" },
+			"name": "quantification Reproducable Experiment Description",
+			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
+			"description": "Reproducable Experiment Description to describe the process of the label-free quantification.",
+			"creator": { "@id": "#cjansen" },
+			"potentialAction": {
+				"@type": "ActivateAction",
+				"instrument": { "@id": "#ccfaice" }
+			},
+			"codeRepository": { "@id": "https://github.com/deep-projects/knime-labelfree-quantification-experiments" }
+		},
+
+		{
+			"@id": "#cjansen",
+			"@type": "Person",
+			"name": "Christoph Jansen",
+			"email": "Christoph.Jansen@htw-berlin.de"
+		},
+		{
+			"@id": "#contact",
+			"@type": "ContactPoint",
+			"email": "Christoph.Jansen@htw-berlin.de"
+		},
+
+    {
+			"@id": "#cwltool",
+			"@type": "SoftwareApplication",
+			"name": "cwltool",
+			"description": "Common Workflow Language reference implementation",
+			"url": { "@id": "https://github.com/common-workflow-language/cwltool/" },
+			"version": "1.0.20190618201008",
+			"cite-as": { "@id": "https://doi.org/10.5281/zenodo.3250191" }
+		},
+    {
+			"@id": "#ccfaice",
+			"@type": "SoftwareApplication",
+			"name": "faice",
+			"description": "RED format local execution engine",
+			"url": { "@id": "https://github.com/curious-containers/curious-containers/tree/master/cc-faice" },
+			"version": "8.1"
+		},
+    {
+			"@id": "#python",
+			"@type": "SoftwareApplication",
+			"name": "python",
+			"description": "The python programming language interpreter",
+			"version": "3.5"
+		}
+	]
+}
