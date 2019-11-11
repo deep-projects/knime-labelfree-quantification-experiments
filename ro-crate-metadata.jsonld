@@ -13,7 +13,7 @@
 			"name": "knime-labelfree-quantification-experiments",
 			"author": "#cjansen",
 			"contactPoint": "#contact",
-			"description": "A collection of CWL and RED Workflow Descriptions. The experiments described perform a label-free quantification of peptides.",
+			"description": "A collection of CWL Workflows and Reproducable Experiment Descriptions. The experiments described perform a label-free quantification of peptides.",
 			"url": "https://github.com/deep-projects/knime-labelfree-quantification-experiments",
 			"hasPart": [
 				{ "@id": "generate-red-and-job.py" },
@@ -66,7 +66,6 @@
 		{
 			"@id": "knime-labelfree-quantification.red.yml",
 			"@type": "SoftwareSourceCode",
-			"additionalType": { "@id": "wfdesc:Workflow" },
 			"name": "quantification Reproducable Experiment Description",
 			"programmingLanguage": { "@id": "https://www.curious-containers.cc/" },
 			"description": "Reproducable Experiment Description to describe the process of the label-free quantification.",
